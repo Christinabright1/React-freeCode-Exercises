@@ -1,0 +1,15 @@
+When writing JSX, it’s common to use variables to set attributes.
+
+Here’s an example of how that might work:
+
+// Use a variable to set the `height` and `width` attributes:
+
+const sideLength = "200px";
+
+const panda = (
+  <img 
+    src="images/panda.jpg" 
+    alt="panda" 
+    height={sideLength} 
+    width={sideLength} />
+);
