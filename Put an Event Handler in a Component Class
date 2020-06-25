@@ -1,0 +1,34 @@
+You can, and often will, pass functions as props. It is especially common to pass event handler functions.
+
+you will pass an event handler function as a prop.
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Button } from './Button';
+
+/*function talk () {
+	let speech = '';
+  for (let i = 0; i < 10000; i++) {
+    speech += 'blah ';
+  }
+  alert(speech);
+}
+*/
+class Talker extends React.Component {
+  talk(){
+    let speech = '';
+  for (let i = 0; i < 10000; i++) {
+    speech += 'blah ';
+  }
+  alert(speech);
+  }
+  render() {
+    return <Button />;
+  }
+}
+
+ReactDOM.render(
+  <Talker />,
+  document.getElementById('app')
+);
