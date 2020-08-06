@@ -1,0 +1,18 @@
+
+
+// if-statements are fine to conditionally show , however...
+// ...only ternaries (seen below) allow us to insert these conditionals
+// in JSX, however
+function Header() {
+  const isAuthenticated = checkAuth();
+
+  return (
+    <nav>
+      <Logo />
+      {/* if isAuth is true, show AuthLinks. If false, Login  */}
+      {isAuthenticated ? <AuthLinks /> : <Login />}
+      {/* if isAuth is true, show Greeting. If false, nothing. */}
+      {isAuthenticated && <Greeting />}
+    </nav>
+  );
+}
