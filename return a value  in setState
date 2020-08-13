@@ -1,0 +1,18 @@
+setState() is just a function you call. You doesn't change anything about javascript.
+A framework like React can't change the rules of the language.
+- update the state: this is why you use setState
+- return a value: this is why you use "return"
+
+  generateTarget = () => {
+    const target = Math.floor(Math.random() * 9);
+    this.setState({ target });
+    return target;
+  };
+  generateComputerValue = () => {
+    const computer = Math.floor(Math.random() * 10);
+    this.setState({
+      computer
+    });
+    return computer;
+  };
+
